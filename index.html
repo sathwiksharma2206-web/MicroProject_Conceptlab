@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101322" />
+  <meta name="description" content="ConceptLab — explore computer science concepts through interactive visual learning." />
+  <title>ConceptLab — Learn by Exploring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="ConceptLab home"><span class="brand-mark"><span></span><span></span><span></span></span><span>concept<span class="brand-light">lab</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">◫</span> Overview</button>
+        <button class="nav-item" data-page="number-systems"><span class="nav-icon">⌘</span> Number systems <span class="nav-dot purple"></span></button>
+        <button class="nav-item" data-page="dfa"><span class="nav-icon">◎</span> Automata lab <span class="nav-dot blue"></span></button>
+        <button class="nav-item" data-page="complexity"><span class="nav-icon">⌁</span> Big O explorer <span class="nav-dot orange"></span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-card"><div class="sparkle">✦</div><strong>Small steps. Big ideas.</strong><p>Understand the concept, not just the answer.</p><div class="mini-progress"><span></span></div><small id="sidebarProgress">0 of 3 modules explored</small></div>
+        <button class="nav-item" data-page="about"><span class="nav-icon">ⓘ</span> About ConceptLab</button>
+        <div class="profile"><div class="avatar">CL</div><div><strong>Student workspace</strong><small>Learning mode</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button><div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumbCurrent">Overview</strong></div><div class="topbar-right"><span class="live-pill"><i></i> ALL SYSTEMS READY</span><button class="icon-button" id="themeToggle" title="Toggle light/dark appearance" aria-label="Toggle appearance">☼</button><div class="top-avatar">S</div></div></header>
+      <div class="content" id="pageContent">
+        <section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR INTERACTIVE LEARNING SPACE</div><h1>Learn the logic.<br><span>See the magic.</span></h1><p>Three core computer science concepts. One hands-on playground. Explore ideas, experiment freely, and make the theory click.</p><div class="hero-actions"><button class="btn btn-primary" data-go="number-systems">Start exploring <span>↗</span></button><button class="btn btn-quiet" data-go="about">How it works <span>→</span></button></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="art-core"><span>010</span><span>101</span><span>110</span></div><div class="floating-chip chip-a">{ }</div><div class="floating-chip chip-b">Σ</div><div class="floating-chip chip-c">01</div><div class="art-caption"><span class="caption-dot"></span> THEORY, MADE TANGIBLE</div></div><div class="hero-grid"></div></section>
+        <section class="section-heading"><div><div class="eyebrow muted-eyebrow">THE LEARNING PATH</div><h2>Pick a concept to explore</h2><p class="section-subtitle">Each module turns an abstract idea into something you can interact with.</p></div><div class="module-count"><strong>03</strong><span>CORE MODULES</span></div></section>
+        <section class="module-grid">
+          <article class="module-card card-purple"><div class="card-topline"><span class="module-tag">MODULE 01</span><span class="card-symbol">⌘</span></div><div class="module-visual number-visual"><div class="binary-row">0101 <span>1010</span></div><div class="conversion-flow"><span>BIN</span><i>→</i><span>DEC</span><i>→</i><span>HEX</span></div><div class="number-big">1011<span>₂</span></div></div><div class="module-info"><div class="module-kicker">COMPUTER ORGANIZATION & ARCHITECTURE</div><h3>Number Systems</h3><p>See how computers represent values. Convert between binary, decimal, octal, and hexadecimal instantly.</p><div class="card-footer"><span class="difficulty"><i></i> Beginner friendly</span><button class="circle-arrow" data-go="number-systems" aria-label="Open Number Systems">↗</button></div></div></article>
+          <article class="module-card card-blue"><div class="card-topline"><span class="module-tag">MODULE 02</span><span class="card-symbol">◎</span></div><div class="module-visual dfa-visual"><svg viewBox="0 0 320 130" role="img" aria-label="Two-state finite automaton diagram"><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7f9dff"/></marker></defs><path d="M70 62 L122 62" stroke="#7f9dff" stroke-width="2" marker-end="url(#arrow)"/><path d="M176 62 L228 62" stroke="#7f9dff" stroke-width="2" marker-end="url(#arrow)"/><path d="M45 42 C10 5, 10 100, 45 82" fill="none" stroke="#7f9dff" stroke-width="2" marker-end="url(#arrow)"/><circle cx="55" cy="62" r="24" fill="#182b51" stroke="#7f9dff" stroke-width="2"/><circle cx="151" cy="62" r="24" fill="#182b51" stroke="#7f9dff" stroke-width="2"/><circle cx="151" cy="62" r="19" fill="none" stroke="#7f9dff" stroke-width="1.5"/><text x="55" y="67" text-anchor="middle" fill="#dce6ff" font-size="13">q0</text><text x="151" y="67" text-anchor="middle" fill="#dce6ff" font-size="13">q1</text><text x="97" y="50" fill="#9eb5ff" font-size="11">1</text><text x="202" y="50" fill="#9eb5ff" font-size="11">0</text><text x="258" y="67" fill="#7184ac" font-size="11">accept</text></svg><div class="dfa-legend"><span><i class="legend-start"></i> Start state</span><span><i class="legend-accept"></i> Accept state</span></div></div><div class="module-info"><div class="module-kicker">FORMAL LANGUAGE & AUTOMATA THEORY</div><h3>Automata Lab</h3><p>Build intuition for deterministic finite automata. Feed in a string and watch the machine decide.</p><div class="card-footer"><span class="difficulty"><i></i> Beginner friendly</span><button class="circle-arrow" data-go="dfa" aria-label="Open Automata Lab">↗</button></div></div></article>
+          <article class="module-card card-orange"><div class="card-topline"><span class="module-tag">MODULE 03</span><span class="card-symbol">⌁</span></div><div class="module-visual complexity-visual"><div class="chart-labels"><span>GROWTH</span><span>INPUT SIZE →</span></div><svg viewBox="0 0 320 125" role="img" aria-label="Big O complexity growth curves"><path d="M25 10 V105 H305" fill="none" stroke="#42465a" stroke-width="1.5"/><path d="M25 91 C100 90, 190 89, 300 88" fill="none" stroke="#8d75ff" stroke-width="2.5"/><path d="M25 101 C70 92, 140 70, 300 30" fill="none" stroke="#53d6c5" stroke-width="2.5"/><path d="M25 104 C100 100, 190 75, 300 5" fill="none" stroke="#ffad68" stroke-width="2.5"/><path d="M25 104 C85 102, 155 96, 300 75" fill="none" stroke="#83a6ff" stroke-width="2.5" stroke-dasharray="4 4"/></svg><div class="chart-legend"><span><i class="legend-purple"></i> O(1)</span><span><i class="legend-teal"></i> O(n)</span><span><i class="legend-orange"></i> O(n²)</span></div></div><div class="module-info"><div class="module-kicker">DESIGN & ANALYSIS OF ALGORITHMS</div><h3>Big O Explorer</h3><p>Compare how algorithms scale as input grows. Understand why efficiency matters before code runs.</p><div class="card-footer"><span class="difficulty"><i></i> Beginner friendly</span><button class="circle-arrow" data-go="complexity" aria-label="Open Big O Explorer">↗</button></div></div></article>
+        </section>
+        <section class="bottom-row"><div class="learning-note"><div class="note-icon">✦</div><div><span class="module-kicker">A BETTER WAY TO LEARN</span><h3>Curiosity is your best tool.</h3><p>Change an input. Observe what happens. Then connect the result to the concept behind it.</p></div><div class="note-decoration">✳</div></div><div class="progress-card"><div class="progress-card-top"><div><span class="module-kicker">YOUR PROGRESS</span><h3>Exploration tracker</h3></div><span class="progress-percent" id="progressPercent">0%</span></div><div class="progress-track"><span id="progressBar"></span></div><div class="progress-bottom"><span id="progressText">No modules explored yet</span><span>3 modules total</span></div><div class="progress-mini-list"><span><i class="mini-purple"></i> Number systems</span><span><i class="mini-blue"></i> Automata lab</span><span><i class="mini-orange"></i> Big O</span></div></div></section>
+        <footer class="footer"><span>© 2026 ConceptLab</span><span>Built for curious minds <b>✦</b></span><span>LEARN · EXPERIMENT · UNDERSTAND</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
